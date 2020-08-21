@@ -60,3 +60,57 @@ for filepath in path.glob('*.py'):
         print(filepath, cnt)
         terms[term] += cnt
 print("")
+
+
+howOld = input("年齢は？ : ")
+if howOld.isdigit():
+    age = int(howOld)
+    if age < 20:
+        if 6 <= age <= 15:
+            print("未成年＿義務教育")
+        else:
+            print("未成年＿他")
+            print("EOL(end of line)＝行末")
+    elif age < 65:
+        print("成人")
+    else:
+        print("高齢者")
+
+
+print("")
+programing_language = ["Python", "Java", "R", "Flutter", "PHP"]
+print(programing_language)
+programing_language.pop()
+print("配列リストの最後を削除")
+print(programing_language)
+del programing_language[1]
+print("指定した要素を削除")
+print(programing_language)
+programing_language.append("Ruby")
+print("配列リストに要素を追加")
+print(programing_language)
+programing_language.remove("R")
+print("配列リストから値と一致する最初の要素を削除")
+print(programing_language)
+
+
+# タプル：要素を変更できない配列リスト
+print("")
+example_Tuple = ("ラーメン", 500)
+example_Array = ["寿司", 1000]
+print("Tuple :" + example_Tuple[0])
+print("Array :" + example_Array[0])
+# example_Tuple[0] = "カレー"
+example_Array[0] = "天ぷら"
+print("Tuple :" + example_Tuple[0])
+print("Array :" + example_Array[0])
+
+
+# 総当り対戦表
+print("")
+team = ["A", "B", "C", "D", "E"]
+opps = ["A", "B", "C", "D", "E"]
+for t1 in team:
+    opps.remove(t1)
+    for t2 in opps:
+        print(t1, " vs ", t2)
